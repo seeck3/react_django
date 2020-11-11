@@ -9,6 +9,6 @@ class ArticleListView(ListAPIView):
     serializer_class = ArticleSerializer
 
 
-class ArticleDetailView(ListAPIView):
+class ArticleDetailView(RetrieveAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer

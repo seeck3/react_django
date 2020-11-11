@@ -1,13 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Layout } from './components/Layout/Layout';
+import React, { Fragment } from "react";
+
+import "antd/dist/antd.css";
+import { LayoutComponent } from "./components/Layout/LayoutComponent";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes } from "./components/routes/Routes";
 
 function App() {
   return (
-    <div className='App'>
-      <Layout>asdf</Layout>
-    </div>
+    <Fragment>
+      <Router>
+        <LayoutComponent>
+          <Routes />
+        </LayoutComponent>
+      </Router>
+    </Fragment>
   );
 }
 
